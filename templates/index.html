@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div style="color:white">
+        <form action="{{ url_for('predict')}}" method="post">
+            <h2>Predictive analysis</h2>
+            <h3>What is the Company Name?</h3><br><select name="CompanyName_audi" id="company" required="required">
+                <option value="audi">Audi</option>
+                <option value="buick">Buick</option>
+                <option value="porsche">Porsche</option>
+                <option value="jaguar">jaguar</option>
+                <option value="bmw">BMW</option>
+                <option value="toyota">Toyota</option>
+                <option value="saab">Saab</option>
+            </select>
+            <h3>What is type of Car Aspiration?</h3><br><select name="aspiration_turbo" id="aspiration" required="required">
+                <option value="turbo">Turbo</option>
+                <option value="std">Standard</option>
+            </select>
+            <h3>What is type of Car Body?</h3><br><select name="carbody_hardtop" id="carbody" required="required">
+                <option value="hardtop">Hard Top</option>
+                <option value="wagon">Wagon</option>
+            </select>
+             </select>
+            <h3>What is type of drivewheel?</h3><br><select name="drivewheel_fwd" id="drivewheel" required="required">
+                <option value="fwd">Front Wheel Drive</option>
+                <option value="rwd">Rear Wheel Drive</option>
+                
+            </select>
+            <h3>How many Cylinders car has?</h3><br><select name="cylindernumber_five" id="cylinder" required="required">
+                <option value="5">Five</option>
+                <option value="4">Four</option>
+            </select>
+            <h3>Car Width</h3>
+            <input id="width" name="carwidth" type="number ">
+            <br><br><button id="sub" type="submit ">Calculate Price</button>
+            <br>
+
+
+
+
+        </form>
+
+
+
+        <br><br><h3>{{ prediction_text }}<h3>
+    </div>
+
+
+
+
+   <style>
+        body {
+            background-color: rgb(76,175,80);
+            text-align: center;
+            padding: 0px;
+        }
+        
+        #research {
+            font-size: 18px;
+            width: 100px;
+            height: 23px;
+            top: 23px;
+        }
+        
+        #box {
+            border-radius: 60px;
+            border-color: 45px;
+            border-style: solid;
+            font-family: cursive;
+            text-align: center;
+            background-color: rgb(168, 131, 61);
+            font-size: medium;
+            position: absolute;
+            width: 700px;
+            bottom: 9%;
+            height: 850px;
+            right: 30%;
+            padding: 0px;
+            margin: 0px;
+            font-size: 14px;
+        }
+        
+        #fuel {
+            width: 83px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 20px;
+        }
+        
+        #fuel:hover {
+            background-color: coral;
+        }
+        
+        #research {
+            width: 99px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #research:hover {
+            background-color: coral;
+        }
+        
+        #resea {
+            width: 99px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #resea:hover {
+            background-color: coral;
+        }
+        
+        #sub {
+            width: 120px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #sub:hover {
+            background-color: darkcyan;
+        }
+        
+        #first {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        
+    </style>
+</body>
+
